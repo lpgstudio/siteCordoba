@@ -28,11 +28,12 @@
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-      <link href="../css/login.css" rel="stylesheet">
+      <!-- <link href="../css/login.css" rel="stylesheet"> -->
+      <link href="css/style-painel.css" rel="stylesheet">
       <script src="../js/login.js"></script>
 
-      <link rel="shortcut icon" href="../img/logoicone1.ico" type="image/x-icon">
-    <link rel="icon" href="../img/logoicone2.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="img-sistema/icons/miniatura.jpeg" type="image/x-icon">
+    <link rel="icon" href="img-sistema/icons/miniatura.jpeg" type="image/x-icon">
 
 
 </head>
@@ -40,52 +41,33 @@
 
 
 <body>
-    <div class="container">
-        <div class="row">
-			<div class="col-md-5 mx-auto">
-			<div id="first">
-				<div class="myform form ">
-					 <div class="logo mb-3">
-						 <div class="col-md-12 text-center">
-							<h1>Login</h1>
-						 </div>
+<section id="login">
+   <div class="container">
+      <div class="card">
+         <div class="logo-login">
+            <img src="img-sistema/cordoba-logo-login.png" alt="Logo Cordoba">
 					</div>
                    <form action="autenticar.php" method="post" name="login">
-                           <div class="form-group">
                               <label for="exampleInputEmail1">Email ou CPF</label>
-                              <input type="text" name="email_login"  class="form-control" id="email_login" aria-describedby="emailHelp" placeholder="Insira seu Email ou CPF">
-                           </div>
-                           <div class="form-group">
+                              <input type="text" name="email_login"  class="" id="email_login" aria-describedby="emailHelp" placeholder="Insira seu Email ou CPF">
+
                               <label for="exampleInputEmail1">Senha</label>
-                              <input type="password" name="senha_login" id="senha_login"  class="form-control" aria-describedby="emailHelp" placeholder="Senha">
+                              <input type="password" name="senha_login" id="senha_login"  class="" aria-describedby="emailHelp" placeholder="Senha">
+
+                           <div class="btn-form">
+                              <button type="submit" class="btn-forms">Acessar</button>
                            </div>
-                          
 
-                           <div class="col-md-12 text-center mt-4">
-                              <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
-                           </div>
-                          
-
-                           
-
-                           <div class="form-group mt-4">
+                           <div class="">
                               <small>
-                              <p class="text-center">Não possui Cadastro? <a href="#" data-toggle="modal" data-target="#modalCadastro">Cadastre-se</a></p>
-                              <p class="text-center"><a class="text-danger" href="#" data-toggle="modal" data-target="#modalRecuperar">Recuperar Senha?</a></p>
+                              <p class="text-center"><a class="text-danger" href="#" data-toggle="modal" data-target="#modalRecuperar">Esqueci minha senha</a></p>
                            </small>
                            </div>
                         </form>
-                 
-				</div>
-			</div>
-			  
-			</div>
-		</div>
+		   </div>
       </div>   
-         
+   </section>
 </body>
-
-
 </html>
 
 
