@@ -144,6 +144,7 @@ require_once("conexao.php");
                                             <span>Add aos Favoritos</span>
                                         </li> -->
                                         <li><a href="" onclick="carrinhoModal('<?php echo $id ?>, Não')"><i class="fa fa-shopping-cart"></i></a>
+                                        <span>Adicionar ao carrinho</span>
                                         </li>
                                         <a href="produto-<?php echo $nome_url ?>"><i class="fas fa-eye"></i></a>
                                             <span>Ver Detalhes</span>
@@ -180,6 +181,7 @@ require_once("conexao.php");
                                         <span>Add aos Favoritos</span>
                                     </li> -->
                                     <li><a href="" onclick="carrinhoModal('<?php echo $id ?>, Não')"><i class="fa fa-shopping-cart"></i></a>
+                                    <span>Adicionar ao carrinho</span>
                                     </li>
                                     <li>
                                     <a href="produto-<?php echo $nome_url ?>"><i class="fas fa-eye"></i></a>
