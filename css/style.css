@@ -28,12 +28,17 @@ a{
     color: var(--dark-red);
     text-decoration: none;
 }
+a:hover{
+    color: var(--dark-red);
+
+}
+
 
 body {
     height: 100%;
 }
 
-.container {
+.container-cordoba {
     width: min(90%, 1200px);
     margin: 0 auto;
 }
@@ -323,11 +328,11 @@ nav .icons i{
     color: var(--dark-red);
     font-size: 16px;
     margin-right: 5px;
-    border-bottom: 1px solid transparent;
+    /* border-bottom: 1px solid transparent; */
 }
 
 #destaques .container .headline a:hover{
-    border-bottom: 1px solid var(--dark-red);
+    /* border-bottom: 1px solid var(--dark-red); */
 }
 
 .product-container{
@@ -410,7 +415,7 @@ nav .icons i{
 }
 
 .action li:hover{
-    background-color: var(--red);
+    background-color: var(--dark-red);
     color: var(--white);
 }
 .action li:hover a{
@@ -460,6 +465,9 @@ nav .icons i{
     color: var(--dark-red);
     margin: 5px 0;
 }
+.product-container .card .content .productName h3 a:hover{
+    color: var(--dark-red);
+}
 
 .product-container .card .content .productName p{
     color: var(--dark-red);
@@ -501,6 +509,9 @@ nav .icons i{
     display: flex;
     justify-content: center;
     margin-top: 60px;
+}
+.link-ver-todos:hover{
+    color: var(--dark-red);
 }
 
 #promocao .container, 
@@ -593,6 +604,7 @@ nav .icons i{
 #contato .contato .contato-text h3{
     color: var(--dark-red);
     font-size: 64px;
+    font-weight: 700;
 }
 
 #contato .contato .contato-text p{
@@ -642,7 +654,7 @@ nav .icons i{
 
 #info .container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
 
     color: var(--dark-red);
@@ -1487,6 +1499,7 @@ object-fit: cover;
     position: fixed;
     bottom: 0;
     left: 50%;
+    width: min(90%, 1200px);
     transform: translateX(-50%);
     border-top: 10px solid var(--dark-red);
     background-color: var(--white);

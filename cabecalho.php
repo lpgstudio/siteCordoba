@@ -34,7 +34,7 @@ $id_usuario = @$_SESSION['id_usuario'];
     <title><?php echo $nome_loja ?></title>
 </head>
 
-<body>
+
 
 
     <!-- Page Preloder 
@@ -58,7 +58,7 @@ $id_usuario = @$_SESSION['id_usuario'];
              <a href="sistema/logout.php">Sair</a>
          <?php } ?>
         </div>
-        <nav class="container">
+        <nav class="container-cordoba">
             <div class="logo">
             <a href="index.php"><img src="img/cordoba-logo.png" alt="Cordoba"></a>
             </div>

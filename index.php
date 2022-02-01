@@ -44,7 +44,7 @@ require_once("conexao.php");
         </div>
     </div>
     <div class="container">
-    <div class="categoria-box">
+        <div class="categoria-box">
             <div class="categoria-card">
                 <div class="categoria-card-img">
                     <a href="#"><img src="img/categorias/cueca.png" alt=""></a>
@@ -144,7 +144,7 @@ require_once("conexao.php");
                                             <span>Add aos Favoritos</span>
                                         </li> -->
                                         <li><a href="" onclick="carrinhoModal('<?php echo $id ?>, Não')"><i class="fa fa-shopping-cart"></i></a>
-                                        <li>
+                                        </li>
                                         <a href="produto-<?php echo $nome_url ?>"><i class="fas fa-eye"></i></a>
                                             <span>Ver Detalhes</span>
                                         </li>
@@ -180,6 +180,115 @@ require_once("conexao.php");
                                         <span>Add aos Favoritos</span>
                                     </li> -->
                                     <li><a href="" onclick="carrinhoModal('<?php echo $id ?>, Não')"><i class="fa fa-shopping-cart"></i></a>
+                                    </li>
+                                    <li>
+                                    <a href="produto-<?php echo $nome_url ?>"><i class="fas fa-eye"></i></a>
+                                        <span>Ver Detalhes</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="content">
+                                <div class="productName">
+                                    <h3><a href="produto-<?php echo $nome_url ?>"><?php echo $nome ?></a></h3>
+                                    <p>Masculino</p>
+                                </div>
+                                <div class="price-rating">
+                                    <h2>R$ <?php echo $valor ?></h2>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas grey fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <?php } } ?>
+                    </div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="swiper myProducts">
+                    <div class="swiper-wrapper">
+                        <?php 
+                            $query = $pdo->query("SELECT * FROM produtos order by vendas desc limit 8 ");
+                            $res = $query->fetchAll(PDO::FETCH_ASSOC);
+
+                            for ($i=0; $i < count($res); $i++) { 
+                            foreach ($res[$i] as $key => $value) {
+                            }
+
+                            $nome = $res[$i]['nome'];
+                            $valor = $res[$i]['valor'];
+                            $nome_url = $res[$i]['nome_url'];
+                            $imagem = $res[$i]['imagem'];
+                            $promocao = $res[$i]['promocao'];
+                            $id = $res[$i]['id'];
+
+                            $valor = number_format($valor, 2, ',', '.');
+
+                            if($promocao == 'Sim'){
+                                $queryp = $pdo->query("SELECT * FROM promocoes where id_produto = '$id' ");
+                                $resp = $queryp->fetchAll(PDO::FETCH_ASSOC);
+                                $valor_promo = $resp[0]['valor'];
+                                $desconto = $resp[0]['desconto'];
+                                $valor_promo = number_format($valor_promo, 2, ',', '.');
+
+                        ?>
+    
+                            <div class="swiper-slide card">
+                                <div class="imgbox">
+                                    <img src="img/produtos/<?php echo $imagem ?>" alt="">
+                                    <ul class="action">
+                                        <!-- <li>
+                                            <i class="fas fa-heart"></i>
+                                            <span>Add aos Favoritos</span>
+                                        </li> -->
+                                        <li><a href="" onclick="carrinhoModal('<?php echo $id ?>, Não')"><i class="fa fa-shopping-cart"></i></a>
+                                        <span>Adicionar ao carrinho</span>
+                                        </li>
+                                        <a href="produto-<?php echo $nome_url ?>"><i class="fas fa-eye"></i></a>
+                                            <span>Ver Detalhes</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="productName">
+                                        <h3><a href="produto-<?php echo $nome_url ?>"><?php echo $nome ?></a></h3>
+                                        <p>Masculino</p>
+                                    </div>
+                                    <div class="price-rating">
+                                        <h2>R$ <?php echo $valor ?></h2>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas grey fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <?php }else{ ?>
+
+
+                        <div class="swiper-slide card">
+                            <div class="imgbox">
+                                <img src="img/produtos/<?php echo $imagem ?>" alt="">
+                                <ul class="action">
+                                    <!-- <li>
+                                        <i class="fas fa-heart"></i>
+                                        <span>Add aos Favoritos</span>
+                                    </li> -->
+                                    <li><a href="" onclick="carrinhoModal('<?php echo $id ?>, Não')"><i class="fa fa-shopping-cart"></i></a>
+                                        <span>Adicionar ao carrinho</span>
+                                    </li>
                                     <li>
                                     <a href="produto-<?php echo $nome_url ?>"><i class="fas fa-eye"></i></a>
                                         <span>Ver Detalhes</span>
@@ -286,6 +395,8 @@ require_once("conexao.php");
                                             <span>Add aos Favoritos</span>
                                         </li> -->
                                         <li><a href="" onclick="carrinhoModal('<?php echo $id ?>, Não')"><i class="fa fa-shopping-cart"></i></a>
+                                        <span>Adicionar ao carrinho</span>
+                                        </li>
                                         <li>
                                         <a href="produto-<?php echo $nome_url ?>"><i class="fas fa-eye"></i></a>
                                             <span>Ver Detalhes</span>
@@ -322,6 +433,8 @@ require_once("conexao.php");
                                         <span>Add aos Favoritos</span>
                                     </li> -->
                                     <li><a href="" onclick="carrinhoModal('<?php echo $id ?>, Não')"><i class="fa fa-shopping-cart"></i></a>
+                                    <span>Adicionar ao carrinho</span>
+                                    </li>
                                     <li>
                                     <a href="produto-<?php echo $nome_url ?>"><i class="fas fa-eye"></i></a>
                                         <span>Ver Detalhes</span>
@@ -366,6 +479,7 @@ require_once("conexao.php");
 
 
 <?php
+require_once("newsletter.php");
 require_once("modal-carrinho.php");
 require_once("rodape.php");
 ?>
