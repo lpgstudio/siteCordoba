@@ -1794,6 +1794,21 @@ object-fit: cover;
         margin-bottom: 50px;
     }
 
+    #cookie.active {
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 2%;
+        flex-direction: column;
+    }
+    /* #cookie .menu-cookie {
+        flex-direction: row;
+    }
+
+    #cookie .menu-cookie button:nth-child(1) {
+        margin-bottom: 0px;
+        margin-right: 10px;
+    } */
+
 }
 
 @media screen and (max-width:554px){
