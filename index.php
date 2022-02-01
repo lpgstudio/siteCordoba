@@ -5,7 +5,7 @@ require_once("conexao.php");
 
 <!-- Seção do banner -->
 <section id="inicio">
-    <div class="swiper mySwiper">
+    <div class="swiper bannerprincipal mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide banner">
                 <img src="img/banner/banner-front 1.png" alt="banner">
@@ -17,8 +17,8 @@ require_once("conexao.php");
                 <img src="img/banner/banner-front 1.png" alt="banner">
             </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
     </div>
     <div class="info-cards">
         <div class="info-card">
@@ -44,6 +44,27 @@ require_once("conexao.php");
         </div>
     </div>
     <div class="container">
+    <div class="categoria-box">
+            <div class="categoria-card">
+                <div class="categoria-card-img">
+                    <a href="#"><img src="img/categorias/cueca.png" alt=""></a>
+                </div>
+                <a href="#">Cuecas</a>
+            </div>
+            <div class="categoria-card">
+                <div class="categoria-card-img">
+                    <a href="#"><img src="img/categorias/calcinhas.png" alt=""></a>
+                </div>
+                <a href="#">Calcinhas</a>
+            </div>
+            <div class="categoria-card">
+                <div class="categoria-card-img">
+                    <a href="#"><img src="img/categorias/meia.png" alt=""></a>
+                </div>
+                <a href="#">Meias</a>
+            </div>
+        </div>
+
         <div class="text-box">
             <h3>
             Conheça o verdadeiro significado de 
