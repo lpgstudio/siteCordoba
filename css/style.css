@@ -255,6 +255,8 @@ nav .icons i{
     display: flex;
     align-items: center;
     margin: 0 20px;
+    min-width: 160px;
+
 }
 
 .info-cards .info-card .text{
@@ -1662,6 +1664,17 @@ object-fit: cover;
         width: 100px;
     }
 
+    #promocao .container .content .headline h4::before,
+    #promocao .container .content .headline h4::after {
+        width: 10%;
+    }
+    #promocao .container .content .headline h4 {
+        font-size: 30px;
+    }
+    .busca input {
+        width: 160px;
+    }
+
     #fale-conosco .container{
         flex-direction: column;
         justify-content: center;
@@ -1685,6 +1698,39 @@ object-fit: cover;
     header .menu-acesso {padding-right: 0px;}
     .busca {display:none;}
     #inicio .banner {height: 100px;}
+
+    #inicio .info-cards{
+        flex-direction: column;
+    }
+
+    .info-cards .info-card {
+        margin: 10px 20px;
+        min-width: 160px;
+        max-width: 250px;
+    }
+
+    .info-cards .info-card .text {
+        margin-left: 10px;
+        text-align: center;
+    }
+    .info-cards .info-card:nth-child(2) .text {
+        margin-left: 25px;
+    }
+
+    .container .categoria-box {
+        flex-direction: column;
+    }
+    .categoria-box .categoria-card {
+        position: relative;
+        text-align: center;
+        margin: 20px 40px;
+    }
+
+    #promocao .container, #destaques .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
 
     #contato .text-box h3 {
         font-size: 41px;
