@@ -1088,7 +1088,7 @@ footer .footer-text p{
 /* Institucionais */
 section.institucional{
     border-top: 36px solid var(--dark-red);
-    padding: 60px 0;
+    padding: 60px 2%;
 }
 
 /* Fale-conosco */
