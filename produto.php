@@ -119,7 +119,7 @@ if($promocao == 'Sim'){
                     <h2>R$ <?php echo $valor ?></h2>
                     <p>ou 10x de R$ R$4,90 sem juros</p>
                 </div>
-                <div class="box-cor">
+                <!-- <div class="box-cor">
                     <?php 
                         $query2 = $pdo->query("SELECT * from carac_prod where id_prod = '$id_produto' ");
                         $res2 = $query2->fetchAll(PDO::FETCH_ASSOC);
@@ -135,7 +135,7 @@ if($promocao == 'Sim'){
                         if($nome_carac == 'Cor'){
                             @$tem_cor = 'Sim';
                         }
-                        ?>
+                        ?>  
                     
                         <select class="form-control form-control-sm mt-2" name="produto-categoria" id="produto-categoria">
                                     <?php 
@@ -151,7 +151,7 @@ if($promocao == 'Sim'){
                                 ?>
                                 </select>
                             <?php } ?>
-                            </div>
+                            </div> -->
                 
                     <div class="tamanho">
                         <p>Selecione o Tamanho</p>
@@ -190,7 +190,8 @@ if($promocao == 'Sim'){
                 <div class="produto-social">
                     <p>Compartilhe</p>
                     <div class="social-box">
-                        <a href="#"><img src="img/icons/instagram.png" alt="Logo Instagram"></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <!-- <a href="#"><img src="img/icons/instagram-red.png" alt="Logo Instagram"></a> -->
                         <a href="#"><img src="img/icons/logo-facebook.png" alt="Logo Facebook"></a>
                     </div>
                 </div>
