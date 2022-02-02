@@ -2,7 +2,8 @@
 require_once("cabecalho.php");
 require_once("conexao.php");
 ?>
-
+<!-- :) -->
+<!-- :) -->
 <!-- Seção do banner -->
 <section id="inicio">
     <div class="swiper bannerprincipal mySwiper">
